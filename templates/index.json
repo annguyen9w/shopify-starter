@@ -48,6 +48,29 @@
         "show_text_below": false
       }
     },
+    "08027949-4c8a-4cc0-bad9-3e2ccfd44ea3": {
+      "type": "heading-line",
+      "blocks": {
+        "template--16645135827167__08027949-4c8a-4cc0-bad9-3e2ccfd44ea3-16735933347fdf3929-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p><strong>Why Shop With Us<\/strong><\/p>",
+            "heading_size": "h0"
+          }
+        }
+      },
+      "block_order": [
+        "template--16645135827167__08027949-4c8a-4cc0-bad9-3e2ccfd44ea3-16735933347fdf3929-0"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 72,
+        "padding_bottom": 0
+      }
+    },
     "d9d621c6-44c0-4b44-a18b-fad2e0f646d0": {
       "type": "multicolumn",
       "blocks": {
@@ -88,7 +111,7 @@
         "template--16645135827167__d9d621c6-44c0-4b44-a18b-fad2e0f646d0-16728048529754329d-2"
       ],
       "settings": {
-        "title": "Why Shop With Us",
+        "title": "",
         "heading_size": "h0",
         "image_width": "third",
         "image_ratio": "adapt",
@@ -100,7 +123,7 @@
         "color_scheme": "background-1",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 72,
+        "padding_top": 44,
         "padding_bottom": 72
       }
     },
@@ -370,33 +393,11 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
-    },
-    "08027949-4c8a-4cc0-bad9-3e2ccfd44ea3": {
-      "type": "heading-line",
-      "blocks": {
-        "template--16645135827167__08027949-4c8a-4cc0-bad9-3e2ccfd44ea3-16735933347fdf3929-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "<p><strong>Why Shop With Us<\/strong><\/p>",
-            "heading_size": "h0"
-          }
-        }
-      },
-      "block_order": [
-        "template--16645135827167__08027949-4c8a-4cc0-bad9-3e2ccfd44ea3-16735933347fdf3929-0"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
     }
   },
   "order": [
     "image_banner",
+    "08027949-4c8a-4cc0-bad9-3e2ccfd44ea3",
     "d9d621c6-44c0-4b44-a18b-fad2e0f646d0",
     "32399c46-c908-4307-b799-f83da537a893",
     "rich_text",
@@ -405,7 +406,6 @@
     "video",
     "multicolumn",
     "38c63830-6c14-46a8-8555-b7fd19d543d9",
-    "91846db7-ab69-4808-a286-baae82608545",
-    "08027949-4c8a-4cc0-bad9-3e2ccfd44ea3"
+    "91846db7-ab69-4808-a286-baae82608545"
   ]
 }
