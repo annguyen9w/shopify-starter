@@ -81,7 +81,7 @@
 
 .mega-menu__link:hover,
 .mega-menu__link--active {
-  color: rgb(var(--color-foreground));
+  color: rgb(var(--color-base-accent-1));
 }
 
 .mega-menu .mega-menu__list--condensed {
