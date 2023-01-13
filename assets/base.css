@@ -2641,7 +2641,7 @@ details[open] > .header__submenu {
 }
 
 .header__menu-item:hover,
-.header__menu-item:hover .header__active-menu-item {
+.header__menu-item .header__active-menu-item {
   color: rgb(var(--color-base-accent-1));
 }
 
