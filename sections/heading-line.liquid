@@ -1,9 +1,3 @@
-<link rel="stylesheet" href="{{ 'component-rte.css' | asset_url }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ 'section-heading-line.css' | asset_url }}" media="print" onload="this.media='all'">
-
-<noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
-<noscript>{{ 'section-heading-line.css' | asset_url | stylesheet_tag }}</noscript>
-
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
@@ -15,6 +9,14 @@
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
+  }
+  .heading-line .rich-text__heading:after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 5px;
+    background: rgb(var(--color-base-accent-1));
+    margin: 10px auto 10px;
   }
 {%- endstyle -%}
 
