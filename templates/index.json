@@ -355,8 +355,8 @@
         "84b65646-4111-44c6-80be-2d1b57f75a9b"
       ],
       "settings": {
-        "title": "slideshow testimonial",
-        "heading_size": "h1",
+        "title": "Customer's Testimonial",
+        "heading_size": "h0",
         "layout": "full_bleed",
         "slide_height": "adapt_image",
         "slider_visual": "counter",
