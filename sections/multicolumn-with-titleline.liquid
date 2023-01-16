@@ -22,6 +22,18 @@
       px;
     }
   }
+
+  .multicolumn-titleline .title-wrapper-with-link {
+    justify-content: center;
+  }
+  .heading-line .rich-text__heading:after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 5px;
+    background: rgb(var(--color-base-accent-1));
+    margin: 10px auto;
+  }
 {%- endstyle -%}
 
 {%- liquid
@@ -32,7 +44,7 @@
   endif
 -%}
 
-<div class="multicolumn color-{{ section.settings.color_scheme }} gradient{% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}{% if section.settings.title == blank %} no-heading{% endif %}">
+<div class="multicolumn-titleline color-{{ section.settings.color_scheme }} gradient{% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}{% if section.settings.title == blank %} no-heading{% endif %}">
   <div class="page-width section-{{ section.id }}-padding isolate">
     {%- unless section.settings.title == blank -%}
       <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin">
@@ -292,6 +304,32 @@
         ],
         "default": "background-1",
         "label": "t:sections.all.colors.label"
+      }, {
+        "type": "select",
+        "id": "column_color_scheme",
+        "options": [
+          {
+            "value": "accent-1",
+            "label": "t:sections.all.colors.accent_1.label"
+          },
+          {
+            "value": "accent-2",
+            "label": "t:sections.all.colors.accent_2.label"
+          },
+          {
+            "value": "background-1",
+            "label": "t:sections.all.colors.background_1.label"
+          },
+          {
+            "value": "background-2",
+            "label": "t:sections.all.colors.background_2.label"
+          }, {
+            "value": "inverse",
+            "label": "t:sections.all.colors.inverse.label"
+          }
+        ],
+        "default": "background-1",
+        "label": "Column Color Scheme"
       }, {
         "type": "header",
         "content": "t:sections.multicolumn.settings.header_mobile.content"
