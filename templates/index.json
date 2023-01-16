@@ -290,14 +290,53 @@
             "text_alignment_mobile": "center"
           }
         },
-        "template--16645135827167__c1da55be-43fc-4ac1-8974-f71eea2c4dd6-167385438331ab1d86-1": {
+        "ceb322a7-f5dd-46c5-8244-b126f40a5ca7": {
           "type": "slide",
           "settings": {
-            "heading": "Image slide",
+            "image": "shopify:\/\/shop_images\/client.jpg",
+            "heading": "Anna Trevor",
             "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
-            "description": "Tell your brand's story through images",
-            "button_label": "Button label",
+            "subheading": "Customer",
+            "description": "Dignissimos reprehenderit repellendus nobis error quibusdam? Atque animi sint unde quis reprehenderit, et, perspiciatis, debitis totam est deserunt eius officiis ipsum ducimus ad labore modi voluptatibus accusantium sapiente nam! Quaerat.",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "4dfa97ac-3d55-45f4-a2e0-01cfee081276": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/client.jpg",
+            "heading": "Anna Trevor",
+            "heading_size": "h1",
+            "subheading": "Customer",
+            "description": "Dignissimos reprehenderit repellendus nobis error quibusdam? Atque animi sint unde quis reprehenderit, et, perspiciatis, debitis totam est deserunt eius officiis ipsum ducimus ad labore modi voluptatibus accusantium sapiente nam! Quaerat.",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "84b65646-4111-44c6-80be-2d1b57f75a9b": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/client.jpg",
+            "heading": "Anna Trevor",
+            "heading_size": "h1",
+            "subheading": "Customer",
+            "description": "Dignissimos reprehenderit repellendus nobis error quibusdam? Atque animi sint unde quis reprehenderit, et, perspiciatis, debitis totam est deserunt eius officiis ipsum ducimus ad labore modi voluptatibus accusantium sapiente nam! Quaerat.",
+            "button_label": "",
             "link": "",
             "button_style_secondary": false,
             "box_align": "middle-center",
@@ -311,7 +350,9 @@
       },
       "block_order": [
         "template--16645135827167__c1da55be-43fc-4ac1-8974-f71eea2c4dd6-167385438331ab1d86-0",
-        "template--16645135827167__c1da55be-43fc-4ac1-8974-f71eea2c4dd6-167385438331ab1d86-1"
+        "ceb322a7-f5dd-46c5-8244-b126f40a5ca7",
+        "4dfa97ac-3d55-45f4-a2e0-01cfee081276",
+        "84b65646-4111-44c6-80be-2d1b57f75a9b"
       ],
       "settings": {
         "layout": "full_bleed",
