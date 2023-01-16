@@ -73,6 +73,13 @@
   --color-button-text: var(--color-background);
 }
 
+.button--primary {
+  --color-button: var(--color-base-outline-button-labels);
+  --color-button-text: var(--color-base-outline-button-labels);
+  --color-button: var(--color-base-accent-1);
+  --alpha-button-background: 1;
+}
+
 .button--secondary {
   --color-button: var(--color-base-outline-button-labels);
   --color-button-text: var(--color-base-outline-button-labels);

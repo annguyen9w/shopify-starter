@@ -1,6 +1,9 @@
 {{ 'component-image-with-text.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
+  #shopify-section-{{ section.id }} {
+    background-color: rgb(var(--color-base-{{ section.settings.full_module_color_scheme }}));
+  }
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
@@ -11,6 +14,25 @@
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
+  }
+
+  .image-with-text .image-with-text__media-item {
+    width: 570px;
+    height: 500px;
+    flex: 0 0 auto;
+  }
+  .image-with-text .image-with-text__media {
+    border: none;
+  }
+  .image-with-text .image-with-text__media-item img {
+    object-fit: cover;
+    object-position: left;
+  }
+  .image-with-text .image-with-text__text-item {
+    flex: 1 1 auto;
+  }
+  .image-with-text .image-with-text__content {
+    padding-left: 0;
   }
 {%- endstyle -%}
 
@@ -204,6 +226,34 @@
       ],
       "default": "no-overlap",
       "label": "t:sections.image-with-text.settings.content_layout.label"
+    },
+    {
+      "type": "select",
+      "id": "full_module_color_scheme",
+      "options": [
+        {
+          "value": "accent-1",
+          "label": "t:sections.all.colors.accent_1.label"
+        },
+        {
+          "value": "accent-2",
+          "label": "t:sections.all.colors.accent_2.label"
+        },
+        {
+          "value": "background-1",
+          "label": "t:sections.all.colors.background_1.label"
+        },
+        {
+          "value": "background-2",
+          "label": "t:sections.all.colors.background_2.label"
+        },
+        {
+          "value": "inverse",
+          "label": "t:sections.all.colors.inverse.label"
+        }
+      ],
+      "default": "background-1",
+      "label": "Full Module Color Scheme"
     },
     {
       "type": "select",
