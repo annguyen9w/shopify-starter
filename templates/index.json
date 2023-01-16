@@ -54,9 +54,9 @@
         "template--16645135827167__7b544fea-e211-406b-b34e-478e2bdf0f07-1673833540d91dcb07-0": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/fast-delivery.png",
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "image": "shopify:\/\/shop_images\/fast-delivery_2aabe585-8285-4d8e-8251-56f9131b7372.png",
+            "title": "Fast Delivery",
+            "text": "<p>variations of passages of Lorem Ipsum available<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -64,9 +64,9 @@
         "template--16645135827167__7b544fea-e211-406b-b34e-478e2bdf0f07-1673833540d91dcb07-1": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/free-shiping.png",
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "image": "shopify:\/\/shop_images\/free-shiping_58dd988e-38b7-47b2-8a7a-aa356a712908.png",
+            "title": "Free Shiping",
+            "text": "<p>variations of passages of Lorem Ipsum available<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -74,9 +74,9 @@
         "template--16645135827167__7b544fea-e211-406b-b34e-478e2bdf0f07-1673833540d91dcb07-2": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/best-quality.png",
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "image": "shopify:\/\/shop_images\/best-quality_7dd2fbf5-90e1-4099-8eec-d1155b0fddaa.png",
+            "title": "Best Quality",
+            "text": "<p>variations of passages of Lorem Ipsum available<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -98,66 +98,10 @@
         "button_label": "",
         "button_link": "",
         "color_scheme": "background-1",
-        "column_color_scheme": "background-1",
+        "column_color_scheme": "accent-2",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 72,
-        "padding_bottom": 72
-      }
-    },
-    "d9d621c6-44c0-4b44-a18b-fad2e0f646d0": {
-      "type": "multicolumn",
-      "blocks": {
-        "template--16645135827167__d9d621c6-44c0-4b44-a18b-fad2e0f646d0-16728048529754329d-0": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Headset_Icon_e8b39e75-d5e0-410d-a6e6-61a100ac3922.png",
-            "title": "Fast Delivery",
-            "text": "<p>variations of passages of Lorem Ipsum available<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "template--16645135827167__d9d621c6-44c0-4b44-a18b-fad2e0f646d0-16728048529754329d-1": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Group_89.png",
-            "title": "Free Shiping",
-            "text": "<p>variations of passages of Lorem Ipsum available<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "template--16645135827167__d9d621c6-44c0-4b44-a18b-fad2e0f646d0-16728048529754329d-2": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Group_81.png",
-            "title": "Best Quality",
-            "text": "<p>variations of passages of Lorem Ipsum available<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--16645135827167__d9d621c6-44c0-4b44-a18b-fad2e0f646d0-16728048529754329d-0",
-        "template--16645135827167__d9d621c6-44c0-4b44-a18b-fad2e0f646d0-16728048529754329d-1",
-        "template--16645135827167__d9d621c6-44c0-4b44-a18b-fad2e0f646d0-16728048529754329d-2"
-      ],
-      "settings": {
-        "title": "Why Shop With Us",
-        "heading_size": "h0",
-        "image_width": "third",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "primary",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "background-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 44,
         "padding_bottom": 72
       }
     },
@@ -182,7 +126,7 @@
           "type": "button",
           "settings": {
             "button_label": "Shop Now",
-            "button_link": ""
+            "button_link": "#"
           }
         }
       },
@@ -199,7 +143,8 @@
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
-        "color_scheme": "background-1",
+        "full_module_color_scheme": "background-2",
+        "color_scheme": "background-2",
         "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 36
@@ -327,7 +272,6 @@
   "order": [
     "image_banner",
     "7b544fea-e211-406b-b34e-478e2bdf0f07",
-    "d9d621c6-44c0-4b44-a18b-fad2e0f646d0",
     "32399c46-c908-4307-b799-f83da537a893",
     "rich_text",
     "featured_collection",
