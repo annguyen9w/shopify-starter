@@ -7,7 +7,6 @@
   {%- style -%}
   @media screen and (max-width: 749px) {
     #Slider-{{ section.id }}::before,
-    #Slider-{{ section.id }} .media::before,
     #Slider-{{ section.id }}:not(.banner--mobile-bottom) .banner__content::before {
       padding-bottom: {{ 1 | divided_by: section.blocks.first.settings.image.aspect_ratio | times: 100 }}%;
       content: '';
@@ -16,7 +15,6 @@
   }
 
   @media screen and (min-width: 750px) {
-    #Slider-{{ section.id }}::before,
     #Slider-{{ section.id }} .media::before {
       padding-bottom: {{ 1 | divided_by: section.blocks.first.settings.image.aspect_ratio | times: 100 }}%;
       content: '';
@@ -26,7 +24,40 @@
   {%- endstyle -%}
 {%- endif -%}
 
-<slideshow-component class="slider-mobile-gutter{% if section.settings.layout == 'grid' %} page-width{% endif %}{% if section.settings.show_text_below %} mobile-text-below{% endif %}" role="region" aria-roledescription="{{ 'sections.slideshow.carousel' | t }}" aria-label="{{ section.settings.accessibility_info | escape }}">
+{%- style -%}
+ .slideshow-testimonial .slideshow__media {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+  .slideshow-testimonial .banner__heading {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 25px;
+  }
+  .slideshow-testimonial .banner__subheading {
+    font-size: 15px;
+    color: #999998;
+    margin-top: 8px;
+    margin-bottom: 0;
+  }
+  .slideshow-testimonial .banner__text {
+    margin-top: 8px;
+    margin-bottom: 0;
+  }
+  .slideshow-testimonial .slideshow__text-wrapper.banner__content {
+    height: unset;
+    max-width: 1170px;
+  }
+  .slideshow-testimonial .slideshow__text.banner__box {
+    padding: 0;
+    width: 83.333333%;
+    max-width: 83.333333%;
+  }
+{%- endstyle -%}
+
+<slideshow-component class="slideshow-testimonial slider-mobile-gutter{% if section.settings.layout == 'grid' %} page-width{% endif %}{% if section.settings.show_text_below %} mobile-text-below{% endif %}" role="region" aria-roledescription="{{ 'sections.slideshow.carousel' | t }}" aria-label="{{ section.settings.accessibility_info | escape }}">
   {%- if section.settings.auto_rotate and section.blocks.size > 1 -%}
     <div class="slideshow__controls slideshow__controls--top slider-buttons no-js-hidden{% if section.settings.show_text_below %} slideshow__controls--border-radius-mobile{% endif %}">
       <button type="button" class="slider-button slider-button--prev" name="previous" aria-label="{{ 'sections.slideshow.previous_slideshow' | t }}" aria-controls="Slider-{{ section.id }}">{% render 'icon-caret' %}</button>
@@ -89,27 +120,30 @@
         aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
         tabindex="-1"
       >
-        <div class="slideshow__media banner__media media{% if block.settings.image == blank %} placeholder{% endif %}">
-          {%- if block.settings.image -%}
-            {%- assign height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round -%}
-            {{ block.settings.image | image_url: width: 3840 | image_tag:
-              loading: 'lazy',
-              height: height,
-              sizes: "100vw",
-              widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
-            }}
-          {%- else -%}
-            {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
-          {%- endif -%}
-        </div>
         <div class="slideshow__text-wrapper banner__content banner__content--{{ block.settings.box_align }} page-width{% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
           <div class="slideshow__text banner__box content-container content-container--full-width-mobile color-{{ block.settings.color_scheme }} gradient slideshow__text--{{ block.settings.text_alignment }} slideshow__text-mobile--{{ block.settings.text_alignment_mobile }}">
+            <div class="slideshow__media banner__media media{% if block.settings.image == blank %} placeholder{% endif %}">
+              {%- if block.settings.image -%}
+                {%- assign height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round -%}
+                {{ block.settings.image | image_url: width: 3840 | image_tag:
+                  loading: 'lazy',
+                  height: height,
+                  sizes: "100vw",
+                  widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+                }}
+              {%- else -%}
+                {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
+              {%- endif -%}
+            </div>
             {%- if block.settings.heading != blank -%}
               <h2 class="banner__heading {{ block.settings.heading_size }}">{{ block.settings.heading | escape }}</h2>
             {%- endif -%}
             {%- if block.settings.subheading != blank -%}
+              <h6 class="banner__subheading">{{ block.settings.subheading | escape }}</h6>
+            {%- endif -%}
+            {%- if block.settings.description != blank -%}
               <div class="banner__text" {{ block.shopify_attributes }}>
-                <span>{{ block.settings.subheading | escape }}</span>
+                <span>{{ block.settings.description | escape }}</span>
               </div>
             {%- endif -%}
             {%- if block.settings.button_label != blank -%}
@@ -171,7 +205,7 @@
 
 {% schema %}
 {
-  "name": "Slideshow Testimonial",
+  "name": "slideshow testimonial",
   "tag": "section",
   "class": "section",
   "settings": [
@@ -315,6 +349,12 @@
           "id": "subheading",
           "default": "Tell your brand's story through images",
           "label": "t:sections.slideshow.blocks.slide.settings.subheading.label"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "default": "Tell your brand's story through images",
+          "label": "Description"
         },
         {
           "type": "text",
@@ -473,7 +513,7 @@
   ],
   "presets": [
     {
-      "name": "Slideshow Testimonial",
+      "name": "slideshow testimonial",
       "blocks": [
         {
           "type": "slide"
