@@ -88,12 +88,12 @@
                     {%- endcapture -%}
                     {{
                        block.settings.image
-                       | image_url: width: 1420
-                       | image_tag:
-                       loading: 'lazy',
-                       sizes: sizes,
-                       widths: '275, 550, 710, 1420',
-                       class: 'multicolumn-card__image' }}
+                     | image_url: width: 1420
+                     | image_tag:
+                     loading: 'lazy',
+                     sizes: sizes,
+                     widths: '275, 550, 710, 1420',
+                     class: 'multicolumn-card__image' }}
                   </div>
                 </div>
               {%- endif -%}
@@ -155,7 +155,7 @@
 
 {% schema %}
   {
-    "name": "t:sections.multicolumn.name",
+    "name": "Multicolumn With Titleline",
     "class": "section",
     "tag": "section",
     "settings": [
@@ -373,7 +373,7 @@
     ],
     "presets": [
       {
-        "name": "t:sections.multicolumn.presets.name",
+        "name": "Multicolumn With Titleline",
         "blocks": [
           {
             "type": "column"
