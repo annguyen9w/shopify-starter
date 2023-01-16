@@ -432,6 +432,7 @@ h5,
 
 .h0 {
   font-size: calc(var(--font-heading-scale) * 4rem);
+  font-weight: bold;
 }
 
 @media only screen and (min-width: 750px) {
