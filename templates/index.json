@@ -48,6 +48,62 @@
         "show_text_below": false
       }
     },
+    "7b544fea-e211-406b-b34e-478e2bdf0f07": {
+      "type": "multicolumn-with-titleline",
+      "blocks": {
+        "template--16645135827167__7b544fea-e211-406b-b34e-478e2bdf0f07-1673833540d91dcb07-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/fast-delivery.png",
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--16645135827167__7b544fea-e211-406b-b34e-478e2bdf0f07-1673833540d91dcb07-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/free-shiping.png",
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--16645135827167__7b544fea-e211-406b-b34e-478e2bdf0f07-1673833540d91dcb07-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/best-quality.png",
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16645135827167__7b544fea-e211-406b-b34e-478e2bdf0f07-1673833540d91dcb07-0",
+        "template--16645135827167__7b544fea-e211-406b-b34e-478e2bdf0f07-1673833540d91dcb07-1",
+        "template--16645135827167__7b544fea-e211-406b-b34e-478e2bdf0f07-1673833540d91dcb07-2"
+      ],
+      "settings": {
+        "title": "Why Shop With Us",
+        "heading_size": "h0",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "08027949-4c8a-4cc0-bad9-3e2ccfd44ea3": {
       "type": "heading-line",
       "blocks": {
@@ -397,6 +453,7 @@
   },
   "order": [
     "image_banner",
+    "7b544fea-e211-406b-b34e-478e2bdf0f07",
     "08027949-4c8a-4cc0-bad9-3e2ccfd44ea3",
     "d9d621c6-44c0-4b44-a18b-fad2e0f646d0",
     "32399c46-c908-4307-b799-f83da537a893",
