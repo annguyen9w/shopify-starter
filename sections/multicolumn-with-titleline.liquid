@@ -22,18 +22,6 @@
       px;
     }
   }
-
-  .multicolumn-with-titleline .title-wrapper-with-link {
-    justify-content: center;
-  }
-  .multicolumn-with-titleline .title-wrapper-with-link .title:after {
-    content: "";
-    display: block;
-    width: 70px;
-    height: 5px;
-    background: rgb(var(--color-base-accent-1));
-    margin: 10px auto;
-  }
 {%- endstyle -%}
 
 {%- liquid
@@ -44,7 +32,7 @@
   endif
 -%}
 
-<div class="multicolumn-with-titleline color-{{ section.settings.color_scheme }} gradient{% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}{% if section.settings.title == blank %} no-heading{% endif %}">
+<div class="multicolumn color-{{ section.settings.color_scheme }} gradient{% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}{% if section.settings.title == blank %} no-heading{% endif %}">
   <div class="page-width section-{{ section.id }}-padding isolate">
     {%- unless section.settings.title == blank -%}
       <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin">
@@ -85,7 +73,7 @@
             id="Slide-{{ section.id }}-{{ forloop.index }}"
             class="multicolumn-list__item grid__item{% if section.settings.swipe_on_mobile %} slider__slide{% endif %}{% if section.settings.column_alignment == 'center' %} center{% endif %}{{ empty_column }}"
             {{ block.shopify_attributes }}>
-            <div class="multicolumn-card content-container color-{{ section.settings.column_color_scheme }}">
+            <div class="multicolumn-card content-container">
               {%- if block.settings.image != blank -%}
                 {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
                   {% assign spaced_image = true %}
@@ -100,12 +88,12 @@
                     {%- endcapture -%}
                     {{
                        block.settings.image
-                     | image_url: width: 1420
-                     | image_tag:
-                     loading: 'lazy',
-                     sizes: sizes,
-                     widths: '275, 550, 710, 1420',
-                     class: 'multicolumn-card__image' }}
+                       | image_url: width: 1420
+                       | image_tag:
+                       loading: 'lazy',
+                       sizes: sizes,
+                       widths: '275, 550, 710, 1420',
+                       class: 'multicolumn-card__image' }}
                   </div>
                 </div>
               {%- endif -%}
@@ -167,7 +155,7 @@
 
 {% schema %}
   {
-    "name": "Multicolumn With Title Line",
+    "name": "t:sections.multicolumn.name",
     "class": "section",
     "tag": "section",
     "settings": [
@@ -305,32 +293,6 @@
         "default": "background-1",
         "label": "t:sections.all.colors.label"
       }, {
-        "type": "select",
-        "id": "column_color_scheme",
-        "options": [
-          {
-            "value": "accent-1",
-            "label": "t:sections.all.colors.accent_1.label"
-          },
-          {
-            "value": "accent-2",
-            "label": "t:sections.all.colors.accent_2.label"
-          },
-          {
-            "value": "background-1",
-            "label": "t:sections.all.colors.background_1.label"
-          },
-          {
-            "value": "background-2",
-            "label": "t:sections.all.colors.background_2.label"
-          }, {
-            "value": "inverse",
-            "label": "Column Color scheme"
-          }
-        ],
-        "default": "background-1",
-        "label": "t:sections.all.colors.label"
-      }, {
         "type": "header",
         "content": "t:sections.multicolumn.settings.header_mobile.content"
       }, {
@@ -411,7 +373,7 @@
     ],
     "presets": [
       {
-        "name": "Multicolumn With Title Line",
+        "name": "t:sections.multicolumn.presets.name",
         "blocks": [
           {
             "type": "column"
