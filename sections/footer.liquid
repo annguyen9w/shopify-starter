@@ -61,9 +61,26 @@
     font-size: 14px;
     font-weight: 600;
     padding: 0 15px;
-    background: #f7444e;
+    background: rgb(var(--color-base-accent-1));;
     color: #fff;
-    border-color: #f7444e;
+    border: 1px solid rgb(var(--color-base-accent-1));;
+    height: 45px;
+    margin-top: 1px;
+    margin-right: 1px;
+    outline: none;
+    z-index: 4;
+  }
+  .footer .field__input,
+  .footer .field__label {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .footer .field__label {
+    top: calc(13px + var(--inputs-border-width));
+  }
+  .footer .field:after {
+    border-color: #ccc;
+    box-shadow: none;
   }
 {%- endstyle -%}
 
@@ -191,9 +208,9 @@
                         required
                       >
                       <label class="field__label" for="NewsletterForm--{{ section.id }}">
-                        {{ 'newsletter.label' | t }}
+                        Enter Your Email
                       </label>
-                      <button type="submit" class="button--subscribe button--primary" name="commit" id="Subscribe" aria-label="{{ 'newsletter.button_label' | t }}">
+                      <button type="submit" class="button--subscribe" name="commit" id="Subscribe" aria-label="{{ 'newsletter.button_label' | t }}">
                         Subscribe
                       </button>
                     </div>
