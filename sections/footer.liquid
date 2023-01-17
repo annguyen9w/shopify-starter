@@ -34,6 +34,21 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+  .logo-text__image {
+    margin-bottom: 30px;
+  }
+  .logo-text__infor {
+    margin-bottom: 20px;
+    line-height: 25px;
+    font-size: 15px;
+  }
+  .footer-block__heading {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+    margin-bottom: 25px;
+  }
 {%- endstyle -%}
 
 <footer class="footer color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
@@ -88,6 +103,39 @@
                       >
                     {%- else -%}
                       {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+                    {%- endif -%}
+                  </div>
+                {%- when 'logo_text' -%}
+                  <div class="footer-block__details-content footer-block-logo-text {{ block.settings.alignment }}">
+                    {%- if block.settings.image != blank -%}
+                      {%- assign image_size_2x = block.settings.image_width | times: 2 | at_most: 5760 -%}
+                      <div class="logo-text__image">
+                        <img
+                          srcset= "{{ block.settings.image | image_url: width: block.settings.image_width }}, {{ block.settings.image | image_url: width: image_size_2x }} 2x"
+                          src="{{ block.settings.image | image_url: width: 400 }}"
+                          alt="{{ block.settings.image.alt | escape }}"
+                          loading="lazy"
+                          width="210"
+                          height="auto"
+                        >
+                      </div>
+                    {%- else -%}
+                      {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+                    {%- endif -%}
+                    {%- if block.settings.address != blank -%}
+                      <div class="logo-text__infor">
+                        <strong>ADDRESS: </strong><span>{{ block.settings.address | escape }}</span>
+                      </div>
+                    {%- endif -%}
+                    {%- if block.settings.telephone != blank -%}
+                      <div class="logo-text__infor">
+                        <strong>TELEPHONE: </strong><span>{{ block.settings.telephone | escape }}</span>
+                      </div>
+                    {%- endif -%}
+                    {%- if block.settings.email != blank -%}
+                      <div class="logo-text__infor">
+                        <strong>EMAIL: </strong><span>{{ block.settings.email | escape }}</span>
+                      </div>
                     {%- endif -%}
                   </div>
                 {%- endcase -%}
@@ -405,6 +453,35 @@
 {
   "name": "t:sections.footer.name",
   "blocks": [
+    {
+      "type": "logo_text",
+      "name": "Logo Text",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "address",
+          "default": "Address",
+          "label": "Address"
+        },
+        {
+          "type": "text",
+          "id": "telephone",
+          "default": "Telephone",
+          "label": "Telephone"
+        },
+        {
+          "type": "text",
+          "id": "email",
+          "default": "Email",
+          "label": "Email"
+        }
+      ]
+    },
     {
       "type": "link_list",
       "name": "t:sections.footer.blocks.link_list.name",
