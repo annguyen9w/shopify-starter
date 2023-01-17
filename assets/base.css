@@ -87,6 +87,14 @@
   --alpha-button-background: 1;
 }
 
+.button--black {
+  --color-button-text: var(--color-base-outline-button-labels);
+  --color-button: #000000;
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+  --alpha-button-background: 1;
+}
+
 .color-background-2 .button--secondary,
 .color-accent-1 .button--secondary,
 .color-accent-2 .button--secondary {
@@ -2940,4 +2948,13 @@ details-disclosure > details {
 
 .fa-solid, .fas {
   font-size: 16px;
+}
+
+.title-underlined:after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 5px;
+  background: rgb(var(--color-base-accent-1));
+  margin: 10px auto;
 }

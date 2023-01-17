@@ -23,6 +23,69 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+  .featured-collection .title {
+    text-align: center;
+  }
+  .featured-collection .contains-card--product {
+    --grid-desktop-vertical-spacing: 25px;
+   }
+  .featured-collection .card--card {
+    padding: 35px;
+    border: 10px solid white;
+    background-color: #f7f8f9;
+    box-shadow: 5px 5px 5px -5px rgb(0 0 0 / 20%);
+  }
+  .featured-collection .card__inner {
+    height: 215px;
+  }
+  .featured-collection .card__content {
+    padding: 0;
+  }
+  .featured-collection .card__heading {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-top: 10px;
+    margin-bottom: 8px;
+  }
+  .featured-collection .card__information {
+    padding: 0;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #002c3e;
+    margin-top: 10px;
+    margin-bottom: 8px;
+  }
+  .featured-collection .card--actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: translateY(100%);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 10;
+    transition: all .2s;
+    
+    --buttons-radius: 30px;
+    --buttons-radius-outset: 30px;
+  }
+  .featured-collection .product-card-wrapper:hover .card--actions {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  .featured-collection .product-card-wrapper .card--actions a {
+    margin: 5px 0;
+    width: 165px;
+  }
 {%- endstyle -%}
 
 {%- liquid
@@ -46,10 +109,16 @@
 -%}
 
 <div class="color-{{ section.settings.color_scheme }} isolate gradient">
-  <div class="collection section-{{ section.id }}-padding{% if section.settings.full_width %} collection--full-width{% endif %}">
+  <div class="collection featured-collection section-{{ section.id }}-padding{% if section.settings.full_width %} collection--full-width{% endif %}">
     <div class="collection__title title-wrapper title-wrapper--no-top-margin page-width{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% endif %}{% if show_desktop_slider %} collection__title--desktop-slider{% endif %}">
       {%- if section.settings.title != blank -%}
-        <h2 class="title {{ section.settings.heading_size }}">{{ section.settings.title | escape }}</h2>
+        <h2 class="title title-underlined {{ section.settings.heading_size }}">
+          {{ section.settings.title | escape }}
+          {%- if section.settings.title_suffix -%}
+            <span class="color-foreground color-foreground-{{ section.settings.title_suffix_color }}">{{ section.settings.title_suffix | escape }}</span>
+          {%- endif %}
+          
+        </h2>
       {%- endif -%}
       {%- if section.settings.description != blank
         or section.settings.show_description
@@ -150,6 +219,40 @@
       "id": "title",
       "default": "Featured collection",
       "label": "t:sections.featured-collection.settings.title.label"
+    },
+    {
+      "type": "text",
+      "id": "title_suffix",
+      "default": "collection",
+      "label": "Title Suffix"
+    },
+    {
+      "type": "select",
+      "id": "title_suffix_color",
+      "options": [
+        {
+          "value": "accent-1",
+          "label": "t:sections.all.colors.accent_1.label"
+        },
+        {
+          "value": "accent-2",
+          "label": "t:sections.all.colors.accent_2.label"
+        },
+        {
+          "value": "background-1",
+          "label": "t:sections.all.colors.background_1.label"
+        },
+        {
+          "value": "background-2",
+          "label": "t:sections.all.colors.background_2.label"
+        },
+        {
+          "value": "inverse",
+          "label": "t:sections.all.colors.inverse.label"
+        }
+      ],
+      "default": "background-1",
+      "label": "Title Suffix Color"
     },
     {
       "type": "select",
