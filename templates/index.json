@@ -153,7 +153,9 @@
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured products",
+        "title": "Our",
+        "title_suffix": "products",
+        "title_suffix_color": "accent-1",
         "heading_size": "h0",
         "description": "",
         "show_description": false,
