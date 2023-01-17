@@ -180,25 +180,18 @@
               "heading": "ACCOUNT",
               "menu": "account"
             }
-          },
-          "fdfdf2b3-74e9-4361-bc2b-9b04673aaa92": {
-            "type": "text",
-            "settings": {
-              "heading": "NEWSLETTER",
-              "subtext": "<p>Subscribe by our newsletter and get update protidin.<\/p>"
-            }
           }
         },
         "block_order": [
           "497c6f61-261a-43bc-87b7-d6780758002a",
           "footer-0",
-          "footer-1",
-          "fdfdf2b3-74e9-4361-bc2b-9b04673aaa92"
+          "footer-1"
         ],
         "settings": {
           "color_scheme": "background-1",
           "newsletter_enable": true,
-          "newsletter_heading": "Subscribe to our emails",
+          "newsletter_heading": "NEWSLETTER",
+          "newsletter_subheading": "Subscribe by our newsletter and get update protidin.",
           "show_social": true,
           "enable_country_selector": true,
           "enable_language_selector": true,
