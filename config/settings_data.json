@@ -158,11 +158,13 @@
       "footer": {
         "type": "footer",
         "blocks": {
-          "footer-2": {
-            "type": "text",
+          "497c6f61-261a-43bc-87b7-d6780758002a": {
+            "type": "logo_text",
             "settings": {
-              "heading": "Our mission",
-              "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+              "image": "shopify:\/\/shop_images\/logo.png",
+              "address": "28 White tower, Street Name New York City, USA",
+              "telephone": "+91 987 654 3210",
+              "email": "yourmain@gmail.com"
             }
           },
           "footer-0": {
@@ -188,7 +190,7 @@
           }
         },
         "block_order": [
-          "footer-2",
+          "497c6f61-261a-43bc-87b7-d6780758002a",
           "footer-0",
           "footer-1",
           "fdfdf2b3-74e9-4361-bc2b-9b04673aaa92"
