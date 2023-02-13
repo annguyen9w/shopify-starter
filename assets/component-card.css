@@ -373,7 +373,7 @@
   box-shadow: 5px 5px 5px -5px rgb(0 0 0 / 20%);
 }
 .card__inner {
-  height: 215px;
+  height: 315px;
 }
 .card__content {
   padding: 8px 0;
@@ -383,7 +383,7 @@
   font-weight: 700;
   line-height: 1.2;
   margin-top: 0.8rem;
-  width: 50%;
+  width: 100%;
 }
 .card__information {
   padding: 0;

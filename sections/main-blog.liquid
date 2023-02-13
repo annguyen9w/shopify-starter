@@ -14,9 +14,13 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  .main-blog {
+    --grid-desktop-vertical-spacing: 40px;
+  }
 {%- endstyle -%}
 
-{%- paginate blog.articles by 6 -%}
+{%- paginate blog.articles by 3 -%}
   <div class="main-blog page-width section-{{ section.id }}-padding">
     <h1 class="title--primary">{{ blog.title | escape }}</h1>
 
@@ -30,7 +34,7 @@
             show_image: section.settings.show_image,
             show_date: section.settings.show_date,
             show_author: section.settings.show_author,
-            show_excerpt: true
+            show_excerpt: false
           -%}
         </div>
       {%- endfor -%}
