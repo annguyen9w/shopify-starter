@@ -372,9 +372,9 @@
   background-color: #f7f8f9;
   box-shadow: 5px 5px 5px -5px rgb(0 0 0 / 20%);
 }
-.card__inner {
+/* .card__inner {
   height: 315px;
-}
+} */
 .card__content {
   padding: 8px 0;
 }
