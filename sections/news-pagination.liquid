@@ -43,6 +43,8 @@
     {%- if paginate.pages > 1 -%}
       {%- render 'pagination', paginate: paginate -%}
     {%- endif -%}
+
+    {% comment %} {{ paginate | default_pagination }} {% endcomment %}
   </div>
 {%- endpaginate -%}
 
